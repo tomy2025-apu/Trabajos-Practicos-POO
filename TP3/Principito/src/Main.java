@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("VIENVENIDO AL PROGRAMA PRINCIPITO");
+        System.out.println("BIENVENIDO AL PROGRAMA PRINCIPITO");
         System.out.println("-------------------------------------------------------------------------------------");
         System.out.println("Texto literario con la flor del principito:\n");
         
