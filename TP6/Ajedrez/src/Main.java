@@ -101,8 +101,7 @@ public class Main {
 		ResultSet rs = null;
 	
 		// Se crea la consulta usando lenguaje SQL Estandar y almacenando en la variable query
-		String query = "Use ajedrez;\n" + //
-                        "select idPieza, \n" + //
+		String query = "select idPieza, \n" + //
                         "TP.DescripciondePieza as TipoPieza , \n" + //
                         "C.Descripcion as Color, \n" + //
                         "P.Descripcion as ResumenPieza, \n" + //
@@ -127,11 +126,11 @@ public class Main {
             // Procesa el resultSet y muestra la informacion obtenida desde la BD
             while(rs.next()){
             	
-            		int idPieza = rs.getInt("idPieza");
+            		int idPieza = rs.getInt("IDPIEZA");
             		System.out.println("Pieza Nro: " + String.valueOf(idPieza)
-            		+ ", Tipo: " + rs.getString("TipoPieza") + ", Color: " + rs.getString("Color")
-                    + ", Resumen de Pieza: "+ rs.getString("ResumenPieza") + ", Movimiento: " + rs.getString("Movimiento")
-                    + ", Comportamiento: " + rs.getString("Comportamiento") + ", Velocidad: " + rs.getInt("Velocidad"));            	         		         			
+                    + ", Tipo: " + rs.getString("TipoPieza") + ", Color: " + rs.getString("Color")
+                    + ", Movimiento: " + rs.getString("MOVIMIENTO")
+                    + ", Comportamiento: " + rs.getString("COMPORTAMIENTO") + ", Velocidad: " + rs.getInt("VELOCIDAD"));        	         		         			
 			}    
         } catch (SQLException e) {
             System.err.println("Error al CARGAR DATOS");
